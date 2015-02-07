@@ -70,11 +70,19 @@
       <DependentUpon>MainDB.mdf</DependentUpon>
     </Content>
     <Content Include="ClientFormUtilities.js" />
+    <Content Include="CreateUser.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Inscription.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

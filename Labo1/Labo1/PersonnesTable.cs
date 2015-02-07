@@ -63,5 +63,4 @@ namespace Labo1
          UpdateRecord(ID, Prenom, Nom, Telephone, CodePostal, Naissance, Sexe, EtatCivil);
       }
    }
-
 }

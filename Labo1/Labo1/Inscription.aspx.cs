@@ -12,14 +12,14 @@ namespace Labo1
    {
       protected void Page_Load(object sender, EventArgs e)
       {
-         if (!Page.IsPostBack) LoadForm();
-         String action = Request["action"];
-         if (action == "cancel")
-            Response.Redirect("ListerPersonnes.aspx");
-         if (action == "delete")
-            DeleteCurrent();
-         if (action == "edit")
-            UpdateCurrent();
+          if (!Page.IsPostBack) LoadForm();
+          String action = Request["action"];
+          if (action == "cancel")
+              Response.Redirect("ListerPersonnes.aspx");
+          if (action == "delete")
+              DeleteCurrent();
+          if (action == "edit")
+              UpdateCurrent();
       }
 
       private void UpdateCurrent()
@@ -36,6 +36,7 @@ namespace Labo1
       {
 
       }
+
       private void InsertSetValueScript(Panel panel, PersonnesTable personne)
       {
          String script = "<script>";
@@ -51,14 +52,14 @@ namespace Labo1
          panel.Controls.Add(new LiteralControl(script));
       }
 
-      private string BuildSetRadioBUttonGroupValueScript(string p1, string p2)
+      private string BuildSetValueScript(String input, String value)
       {
-         return "";
+          return "SetValue('" + input + "', '" + value + "'); ";
       }
 
-      private string BuildSetValueScript(string p1, string p2)
+      private string BuildSetRadioBUttonGroupValueScript(String RBG_Name, String value)
       {
-         return "";
+          return "SetRadioButtonGroupValue('" + RBG_Name + "', '" + value + "'); ";
       }
    }
 
