@@ -14,6 +14,7 @@ namespace Labo1
       public String Telephone { get; set; }
       public DateTime Naissance { get; set; }
       public String CodePostal { get; set; }
+      public String Avatar { get; set; }
       public int Sexe { get; set; }
       public int EtatCivil { get; set; }
       public PersonnesTable(String connexionString, System.Web.UI.Page Page)
@@ -33,6 +34,7 @@ namespace Labo1
          ContentDelegates[6] = ContentDelegateSexe;
          EtatCivil = int.Parse(FieldsValues[7]);
          ContentDelegates[7] = ContentDelegateEtatCivil;
+         Avatar = FieldsValues[8];
       }
       System.Web.UI.WebControls.WebControl ContentDelegateSexe()
       {
@@ -56,11 +58,11 @@ namespace Labo1
       }
       public override void Insert()
       {
-         InsertRecord(Prenom, Nom, Telephone, CodePostal, Naissance, Sexe, EtatCivil);
+         InsertRecord(Prenom, Nom, Telephone, CodePostal, Naissance, Sexe, EtatCivil, Avatar);
       }
       public override void Update()
       {
-         UpdateRecord(ID, Prenom, Nom, Telephone, CodePostal, Naissance, Sexe, EtatCivil);
+         UpdateRecord(ID, Prenom, Nom, Telephone, CodePostal, Naissance, Sexe, EtatCivil, Avatar);
       }
    }
 }
