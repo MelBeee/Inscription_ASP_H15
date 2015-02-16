@@ -785,32 +785,30 @@
         }
 
         .avatar {
-            top: -455px;
-            right: -300px;
-            position: relative;
-        }
 
+        }
     </style>
 </head>
 <body id="body">
-    <form id="form1" method="post" runat="server" action="Inscription.aspx">
+    <form method="post" runat="server" action="Inscription.aspx">
 
         <h3>Inscription</h3>
         <hr />
-        <script type="text/javascript">
-            BuildForm("form1");
-            </script>
+
+
+
         <asp:Panel ID="PN_GridView" runat="server"></asp:Panel>
 
-        <table class="avatar">
+        <table class="avatar" >
             <tr>
+                <td id="form1">
+                    <script type="text/javascript">
+                        BuildForm("form1");
+                    </script>
+                </td>
                 <td rowspan="4">
                     <asp:Image ID="IMG_Avatar" runat="server" CssClass="thumbnail" ImageUrl="~/Images/ADD.png" />
-                </td>
-            </tr>
-            <tr />
-            <tr>
-                <td>
+                    <hr />
                     <asp:FileUpload ID="FU_Avatar" runat="server" onchange="PreLoadImage();" ClientIDMode="Static" />
                 </td>
             </tr>
