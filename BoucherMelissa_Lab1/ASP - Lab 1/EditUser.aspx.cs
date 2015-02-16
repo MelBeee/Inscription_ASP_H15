@@ -34,8 +34,6 @@ namespace ASP___Lab_1
          }
          if (action == "delete")
          {
-            // ICI 
-             Response.Write("<script> confirm('Are you sure you want to save this thing into the database?')</script>");
              if(delete)
              {
                  DeleteCurrent();

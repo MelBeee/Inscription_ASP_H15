@@ -81,6 +81,7 @@ namespace SqlExpressUtilities
             {
                 FieldsVisibility.Add(true);
             }
+            SetVisibility(5, false);
         }
         // Extraire les noms et types des champs 
         void GetFieldsNameAndType()
