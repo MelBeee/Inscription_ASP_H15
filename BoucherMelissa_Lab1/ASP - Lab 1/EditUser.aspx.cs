@@ -9,7 +9,7 @@ namespace ASP___Lab_1
 {
    public partial class EditUsers : System.Web.UI.Page
    {
-       bool delete = true; 
+      bool delete = true; 
       PersonnesTable user;
       protected void Page_Load(object sender, EventArgs e)
       {
@@ -22,8 +22,6 @@ namespace ASP___Lab_1
          else
             IMG_Avatar.ImageUrl = "Images/ADD.png"; // +"?" + DateTime.Now.Millisecond.ToString();
 
-         //if (!Page.IsPostBack)
-         //  LoadForm();
          String action = Request["action"];
          if (action == "cancel")
             Response.Redirect("ListUsers.aspx");
